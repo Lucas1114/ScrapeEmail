@@ -4,6 +4,7 @@ let list = document.getElementById('emailList');
 chrome.runtime.onMessage.addListener((request,sender,sendResponse)=>{
 
     let emails = request.emails;
+    alert(emails);
     if(emails==null || emails.length==0){
         let li = document.createElement('li');
         li.innerText = "No emails found";
